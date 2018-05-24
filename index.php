@@ -6,5 +6,11 @@
  * Time: 12:21
  */
 
-$smmarty = new Template();
-$smarty->display('index');
+require './lib/autoload.php';
+
+$smarty = new Template();
+$smarty->assign('baseUrlCss', Routes::getDefaultCssFolder());
+$smarty->assign('baseUrlImg', Routes::getDefaultImgFolder());
+$smarty->assign('baseUrlJs', Routes::getDefaultJsFolder());
+$smarty->assign('title', Config::SITE_NAME);
+$smarty->display('index.tpl');

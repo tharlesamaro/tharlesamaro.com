@@ -24,11 +24,18 @@ class ComposerStaticInit94ba82a31912125ff88a96edf0df842f
         ),
     );
 
+    public static $classMap = array (
+        'Config' => __DIR__ . '/../..' . '/class/Config.class.php',
+        'Routes' => __DIR__ . '/../..' . '/class/Routes.class.php',
+        'Template' => __DIR__ . '/../..' . '/class/Template.class.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit94ba82a31912125ff88a96edf0df842f::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit94ba82a31912125ff88a96edf0df842f::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit94ba82a31912125ff88a96edf0df842f::$classMap;
 
         }, null, ClassLoader::class);
     }
