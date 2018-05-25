@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Config' => $baseDir . '/class/Config.class.php',
+    'Functions' => $baseDir . '/class/Functions.class.php',
     'Routes' => $baseDir . '/class/Routes.class.php',
     'Template' => $baseDir . '/class/Template.class.php',
 );

@@ -13,5 +13,11 @@ Class Config
     const SITE_FOLDER = "tharlesamaro.com";
     const SITE_NAME = "Tharles Amaro";
 
-    # basic PHPMailer settings
+    # my info
+    const DATE_OF_BIRTH = '1993-05-27';
+    const EMAIIL = 'contato@tharlesamaro.com';
+    const LOCATION = 'Fortaleza, Ceará';
+    const NAME = 'Tharles Amaro';
+    const NATIONALITY = 'Brasileiro';
+    const TELEGRAM = '@tharles';
 }

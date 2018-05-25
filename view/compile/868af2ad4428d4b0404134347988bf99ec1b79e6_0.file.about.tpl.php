@@ -1,5 +1,27 @@
-{*about start*}
-<div id="about" class="commonpage">
+<?php
+/* Smarty version 3.1.32, created on 2018-05-25 16:20:50
+  from '/var/www/html/tharlesamaro.com/view/about.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.32',
+  'unifunc' => 'content_5b086212e81c72_26917660',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '868af2ad4428d4b0404134347988bf99ec1b79e6' => 
+    array (
+      0 => '/var/www/html/tharlesamaro.com/view/about.tpl',
+      1 => 1527276029,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5b086212e81c72_26917660 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class="commonpage">
     <div class="overlay-modern"></div>
     <div class="contentpage">
 
@@ -10,7 +32,8 @@
 
         <div class="col-md-4 col-xs-12">
             <div class="modernicon icon animfadeInUpBig" data-time="1200"><img alt="background"
-                                                                               src="img/male-icon.png">
+                                                                               src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
+icon/male-icon.png">
             </div>
             <p class="animfadeInUpBig" data-time="1000">
                 <strong>Nome :</strong><br/> Tharles Amaro
@@ -22,7 +45,8 @@
                                                                                src="img/cal-icon.png">
             </div>
             <p class="animfadeInUpBig" data-time="1200">
-                <strong> Idade :</strong><br/> {$idadeAtual}
+                <strong> Idade :</strong><br/> <?php echo $_smarty_tpl->tpl_vars['idadeAtual']->value;?>
+
             </p>
         </div>
 
@@ -100,8 +124,7 @@
                 Ma você está certo dissoam?</p>
         </div>
 
-        {*count stat start*}
-        <div id="wrap-modern-count" class="animfadeInDown" data-time="2400">
+                <div id="wrap-modern-count" class="animfadeInDown" data-time="2400">
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="milestone-counter">
                     <span class="stat-count highlight">822</span>
@@ -130,8 +153,8 @@
                 </div>
             </div>
         </div>
-        {*count stat end*}
-
+        
     </div>
 </div>
-{*about end*}
+<?php }
+}
