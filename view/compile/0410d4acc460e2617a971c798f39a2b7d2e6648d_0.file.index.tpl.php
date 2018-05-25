@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-05-24 20:41:42
+/* Smarty version 3.1.32, created on 2018-05-25 15:02:25
   from '/var/www/html/tharlesamaro.com/view/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b074db67d59a8_89279651',
+  'unifunc' => 'content_5b084fb1be4e34_45999757',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0410d4acc460e2617a971c798f39a2b7d2e6648d' => 
     array (
       0 => '/var/www/html/tharlesamaro.com/view/index.tpl',
-      1 => 1527204778,
+      1 => 1527271338,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b074db67d59a8_89279651 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b084fb1be4e34_45999757 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
-    <meta content="" name="description">
+    <meta content="Sou Tharles. Acadêmico de Sistemas para Internet e iniciante em programação web." name="description">
     <meta content="Tharles Amaro" name="author">
     <meta content="tharles" name="keywords">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
@@ -52,7 +52,6 @@ pluginsmodern.js" type="text/javascript"><?php echo '</script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['baseUrlJs']->value;?>
 modern.js" type="text/javascript"><?php echo '</script'; ?>
 >
-
 </head>
 
 <body>
@@ -88,40 +87,56 @@ modern.js" type="text/javascript"><?php echo '</script'; ?>
     
 </div>
 
-
 <div id="webbackground">
     <div id="homeSlider">
-        <div class="bgmodern"><img alt="background" src="#"></div>
-        <div class="bgmodern"><img alt="background" src="#"></div>
+        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
+background/1.jpg"></div>
+        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
+background/2.jpg"></div>
+        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
+background/3.jpg"></div>
+        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
+background/4.jpg"></div>
+        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
+background/5.jpg"></div>
+        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
+background/6.jpg"></div>
+        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
+background/7.jpg"></div>
     </div>
     <div class="overlay-main"></div>
 </div>
 
-<div class="vertex-menu animfadeInRight" data-time="0"><a class="vertex-menu_tx">DOWNLOAD CV</a></div>
+<div class="vertex-menu animfadeInRight" data-time="0">
+    <a href="<?php echo $_smarty_tpl->tpl_vars['baseUrlDoc']->value;?>
+tharlesamaro.pdf" download="curriculo_tharlesamaro.pdf" class="vertex-menu_tx">DOWNLOAD CV</a>
+</div>
 <div id="wrappermodern">
         <div id="sidebar-wrappermodern">
         <div class="sidebar-nav">
 
             <div class="talent animfadeInUpBig" data-time="0">
-                <img alt="background" src="#">
+                <img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
+tharles155pb.png">
             </div>
             <h2 class="animfadeInUpBig" data-time="300">THARLES AMARO</h2>
             <p class="modern-color animfadeInUpBig" data-time="600">SISTEMAS PARA INTERNET</p>
 
             <ul>
-                <li class="animfadeInUpBig" data-time="700"><a class="active" id="home-btn">INÍCIO</a></li>
-                <li class="animfadeInUpBig" data-time="750"><a id="about-btn">SOBRE</a></li>
-                <li class="animfadeInUpBig" data-time="800"><a id="resume-btn">RESUMO</a></li>
-                <li class="animfadeInUpBig" data-time="850"><a id="skill-btn">HABILIDADES</a></li>
-                <li class="animfadeInUpBig" data-time="900"><a id="porto-btn">PORTOFOLIO</a></li>
-                <li class="animfadeInUpBig" data-time="950"><a id="contact-btn">CONTATO</a></li>
+                <li class="animfadeInUpBig" data-time="700"><a href="#">INÍCIO</a></li>
+                <li class="animfadeInUpBig" data-time="750"><a href="#">SOBRE</a></li>
+                <li class="animfadeInUpBig" data-time="800"><a href="#">RESUMO</a></li>
+                <li class="animfadeInUpBig" data-time="850"><a href="#">HABILIDADES</a></li>
+                <li class="animfadeInUpBig" data-time="900"><a href="#">PORTFOLIO</a></li>
+                <li class="animfadeInUpBig" data-time="950"><a href="#">CONTATO</a></li>
             </ul>
 
                         <div id="wrapfooter" class="opaci">
                 <div id="soc-icon" class="animfadeInUpBig" data-time="1000">
-                    <a class="glyph-icon flaticon-github10" href="https://github.com/tharlesamaro"></a>
-                    <a class="glyph-icon flaticon-facebook25" href="#"></a>
-                    <a class="glyph-icon flaticon-twitter16" href="#"></a>
+                    <a class="glyph-icon flaticon-github10" href="https://github.com/tharlesamaro" target="_blank"
+                       rel="noopener"></a>
+                    <a class="glyph-icon flaticon-facebook25" href="https://www.facebook.com/tharlesamaro.face"
+                       target="_blank" rel="noopener"></a>
                 </div>
                 <div id="footer" class="animfadeInUpBig" data-time="1100">©all rights reserved. tharles amaro 2018</div>
             </div>
@@ -148,7 +163,7 @@ modern.js" type="text/javascript"><?php echo '</script'; ?>
     <span class="equal-line equal-line-4 intro"></span>
 </div>
 <audio id="playerintro" loop>
-    <source src="soundintro/musicintro.mp3" type="audio/mpeg">
+    <source src="#" type="audio/mpeg">
 </audio>
 
 </body>

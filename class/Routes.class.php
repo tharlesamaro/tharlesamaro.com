@@ -9,6 +9,7 @@
 Class Routes
 {
     public static $page;
+    private static $page404 = 'controller/404.php';
 
     function __construct()
     {
@@ -26,7 +27,6 @@ Class Routes
         return self::getSiteHome() . '/assets/';
     }
 
-    # return folders CSS, IMG and JS
     static function getDefaultCssFolder()
     {
         return self::getAssetsFolder() . 'css/';
@@ -41,7 +41,11 @@ Class Routes
     {
         return self::getAssetsFolder() . 'js/';
     }
-    # /folder assets
+
+    static function getDefaultDocFolder()
+    {
+        return self::getAssetsFolder() . 'doc/';
+    }
 
     # url friendly
     static function getPage()
@@ -50,8 +54,7 @@ Class Routes
             $page1 = $_GET['page'];
             self::$page = explode('/', $page1);
             $page1 = 'controller/' . self::$page[0] . '.php';
-            $page404 = 'controller/404.php';
-            return (file_exists($page1)) ? include $page1 : include $page404;
+            return (file_exists($page1)) ? include $page1 : include self::$page404;
         endif;
         header('Location: ' . Routes::getSiteHome() . '/inicio');
         die();
