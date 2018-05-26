@@ -46,6 +46,11 @@ Class Routes
         return self::getAssetsFolder() . 'doc/';
     }
 
+    static function getDefaultImgBackgroundFolder()
+    {
+        return './assets/img/background/';
+    }
+
     #static function getPage404()
     #{
         #if (isset($_GET['page'])) :

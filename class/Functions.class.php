@@ -23,4 +23,10 @@ Class Functions
         $interval = $dateOfBirth->diff($currentDate);
         return $interval->y;
     }
+
+    static function getNumberOfFilesImgInTheDirectory($directory)
+    {
+        $files = glob("$directory{*.jpg}", GLOB_BRACE);
+        return count($files);
+    }
 }

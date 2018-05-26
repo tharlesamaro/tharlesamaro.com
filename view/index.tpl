@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>{$title}</title>
-    <meta content="Sou Tharles. Acadêmico de Sistemas para Internet e iniciante em programação web." name="description">
-    <meta content="Tharles Amaro" name="author">
+    <meta content="Sou {$name}. Acadêmico de Sistemas para Internet e iniciante em programação web." name="description">
+    <meta content="{$name}" name="author">
     <meta content="tharles" name="keywords">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
     {*Bootstrap CSS*}
@@ -53,11 +53,11 @@
             <div class="talentintro animfadeInUpBig" data-time="600">
                 <img alt="background" src="#">
             </div>
-            <div class="taglineintro animfadeInUpBig" data-time="900">EU SOU THARLES AMARO</div>
+            <div class="taglineintro animfadeInUpBig" data-time="900">EU SOU {$name}</div>
             <div id="introSlidertext" class="animfadeInUpBig" data-time="1200">
-                <h3>SUPORTE TÉCNICO</h3>
-                <h3>DESENVOLVIMENTO WEB</h3>
-                <h3>TECNOLOGIA DA INFORMAÇÃO</h3>
+                {foreach from=$services item=service}
+                    <h3>{$service}</h3>
+                {/foreach}
             </div>
         </div>
         {*intro element end*}
@@ -71,13 +71,9 @@
 {*background start*}
 <div id="webbackground">
     <div id="homeSlider">
-        <div class="bgmodern"><img alt="background" src="{$baseUrlImg}background/1.jpg"></div>
-        <div class="bgmodern"><img alt="background" src="{$baseUrlImg}background/2.jpg"></div>
-        <div class="bgmodern"><img alt="background" src="{$baseUrlImg}background/3.jpg"></div>
-        <div class="bgmodern"><img alt="background" src="{$baseUrlImg}background/4.jpg"></div>
-        <div class="bgmodern"><img alt="background" src="{$baseUrlImg}background/5.jpg"></div>
-        <div class="bgmodern"><img alt="background" src="{$baseUrlImg}background/6.jpg"></div>
-        <div class="bgmodern"><img alt="background" src="{$baseUrlImg}background/7.jpg"></div>
+        {for $foo=1 to {$backgroundTotal}}
+            <div class="bgmodern"><img alt="background" src="{$baseUrlImg}background/{$foo}.jpg"></div>
+        {/for}
     </div>
     <div class="overlay-main"></div>
 </div>
@@ -95,27 +91,28 @@
             <div class="talent animfadeInUpBig" data-time="0">
                 <img alt="background" src="{$baseUrlImg}avatar.png">
             </div>
-            <h2 class="animfadeInUpBig" data-time="300">THARLES AMARO</h2>
-            <p class="modern-color animfadeInUpBig" data-time="600">SISTEMAS PARA INTERNET</p>
+            <h2 class="animfadeInUpBig" data-time="300">{$name}</h2>
+            <p class="modern-color animfadeInUpBig" data-time="600">{$subtitle}</p>
 
             <ul>
                 <li class="animfadeInUpBig" data-time="700"><a class="active" id="home-btn">INÍCIO</a></li>
                 <li class="animfadeInUpBig" data-time="750"><a id="about-btn">SOBRE</a></li>
-                <li class="animfadeInUpBig" data-time="800"><a href="#">RESUMO</a></li>
-                <li class="animfadeInUpBig" data-time="850"><a href="#">HABILIDADES</a></li>
-                <li class="animfadeInUpBig" data-time="900"><a href="#">PORTFOLIO</a></li>
-                <li class="animfadeInUpBig" data-time="950"><a href="#">CONTATO</a></li>
+                <li class="animfadeInUpBig" data-time="800"><a id="resume-btn">RESUMO</a></li>
+                <li class="animfadeInUpBig" data-time="850"><a id="skill-btn">HABILIDADES</a></li>
+                <li class="animfadeInUpBig" data-time="900"><a id="porto-btn">PORTFOLIO</a></li>
+                <li class="animfadeInUpBig" data-time="950"><a id="contact-btn">CONTATO</a></li>
             </ul>
 
             {*footer end*}
             <div id="wrapfooter" class="opaci">
                 <div id="soc-icon" class="animfadeInUpBig" data-time="1000">
-                    <a class="glyph-icon flaticon-github10" href="https://github.com/tharlesamaro" target="_blank"
+                    <a class="glyph-icon flaticon-github10" href="{$github}" target="_blank"
                        rel="noopener"></a>
-                    <a class="glyph-icon flaticon-facebook25" href="https://www.facebook.com/tharlesamaro.face"
+                    <a class="glyph-icon flaticon-facebook25" href="{$facebook}"
                        target="_blank" rel="noopener"></a>
                 </div>
-                <div id="footer" class="animfadeInUpBig" data-time="1100">©all rights reserved. tharles amaro 2018</div>
+                <div id="footer" class="animfadeInUpBig" data-time="1100">©all rights
+                    reserved. {$name} {$currentYear}</div>
             </div>
             {*footer end*}
         </div>
@@ -143,9 +140,9 @@
                         <div class="col-md-12">
                             <div class="nameslide animfadeInUpBig" data-time="1300">EU SOU THARLES AMARO</div>
                             <div id="homeSlidertext" class="animfadeInUpBig" data-time="1700">
-                                <h3>SUPORTE TÉCNICO</h3>
-                                <h3>DESENVOLVIMENTO WEB</h3>
-                                <h3>TECNOLOGIA DA INFORMAÇÃO</h3>
+                                {foreach from=$detailedServices item=service}
+                                    <h3>{$service}</h3>
+                                {/foreach}
                             </div>
 
                             {*line start*}
@@ -563,7 +560,7 @@
                 </div>
                 {*skill end*}
 
-                {*portfolio start*}
+                {*portofolio start*}
                 <div id="portofolio" class="commonpage">
                     <div class="overlay-modern"></div>
                     <div class="contentpage">
@@ -730,7 +727,7 @@
                         {*gallery end*}
                     </div>
                 </div>
-                {*portfolio end*}
+                {*portofolio end*}
 
                 {*contact start*}
                 <div id="contact" class="commonpage">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-05-25 20:41:17
+/* Smarty version 3.1.32, created on 2018-05-26 15:29:23
   from '/var/www/html/tharlesamaro.com/view/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b089f1da26f33_97582091',
+  'unifunc' => 'content_5b09a783036932_59573628',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0410d4acc460e2617a971c798f39a2b7d2e6648d' => 
     array (
       0 => '/var/www/html/tharlesamaro.com/view/index.tpl',
-      1 => 1527291580,
+      1 => 1527359326,
       2 => 'file',
     ),
   ),
@@ -20,15 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b089f1da26f33_97582091 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b09a783036932_59573628 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
-    <meta content="Sou Tharles. Acadêmico de Sistemas para Internet e iniciante em programação web." name="description">
-    <meta content="Tharles Amaro" name="author">
+    <meta content="Sou <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+. Acadêmico de Sistemas para Internet e iniciante em programação web." name="description">
+    <meta content="<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+" name="author">
     <meta content="tharles" name="keywords">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
         <link href="<?php echo $_smarty_tpl->tpl_vars['baseUrlCss']->value;?>
@@ -75,11 +77,20 @@ modern.js" type="text/javascript"><?php echo '</script'; ?>
             <div class="talentintro animfadeInUpBig" data-time="600">
                 <img alt="background" src="#">
             </div>
-            <div class="taglineintro animfadeInUpBig" data-time="900">EU SOU THARLES AMARO</div>
+            <div class="taglineintro animfadeInUpBig" data-time="900">EU SOU <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+</div>
             <div id="introSlidertext" class="animfadeInUpBig" data-time="1200">
-                <h3>SUPORTE TÉCNICO</h3>
-                <h3>DESENVOLVIMENTO WEB</h3>
-                <h3>TECNOLOGIA DA INFORMAÇÃO</h3>
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['services']->value, 'service');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['service']->value) {
+?>
+                    <h3><?php echo $_smarty_tpl->tpl_vars['service']->value;?>
+</h3>
+                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
         </div>
         
@@ -89,20 +100,19 @@ modern.js" type="text/javascript"><?php echo '</script'; ?>
 
 <div id="webbackground">
     <div id="homeSlider">
-        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
-background/1.jpg"></div>
-        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
-background/2.jpg"></div>
-        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
-background/3.jpg"></div>
-        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
-background/4.jpg"></div>
-        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
-background/5.jpg"></div>
-        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
-background/6.jpg"></div>
-        <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
-background/7.jpg"></div>
+        <?php ob_start();
+echo $_smarty_tpl->tpl_vars['backgroundTotal']->value;
+$_prefixVariable1 = ob_get_clean();
+$_smarty_tpl->tpl_vars['foo'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['foo']->step = 1;$_smarty_tpl->tpl_vars['foo']->total = (int) ceil(($_smarty_tpl->tpl_vars['foo']->step > 0 ? $_prefixVariable1+1 - (1) : 1-($_prefixVariable1)+1)/abs($_smarty_tpl->tpl_vars['foo']->step));
+if ($_smarty_tpl->tpl_vars['foo']->total > 0) {
+for ($_smarty_tpl->tpl_vars['foo']->value = 1, $_smarty_tpl->tpl_vars['foo']->iteration = 1;$_smarty_tpl->tpl_vars['foo']->iteration <= $_smarty_tpl->tpl_vars['foo']->total;$_smarty_tpl->tpl_vars['foo']->value += $_smarty_tpl->tpl_vars['foo']->step, $_smarty_tpl->tpl_vars['foo']->iteration++) {
+$_smarty_tpl->tpl_vars['foo']->first = $_smarty_tpl->tpl_vars['foo']->iteration === 1;$_smarty_tpl->tpl_vars['foo']->last = $_smarty_tpl->tpl_vars['foo']->iteration === $_smarty_tpl->tpl_vars['foo']->total;?>
+            <div class="bgmodern"><img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
+background/<?php echo $_smarty_tpl->tpl_vars['foo']->value;?>
+.jpg"></div>
+        <?php }
+}
+?>
     </div>
     <div class="overlay-main"></div>
 </div>
@@ -119,16 +129,18 @@ tharlesamaro.pdf" download="curriculo_tharlesamaro.pdf" class="vertex-menu_tx">D
                 <img alt="background" src="<?php echo $_smarty_tpl->tpl_vars['baseUrlImg']->value;?>
 avatar.png">
             </div>
-            <h2 class="animfadeInUpBig" data-time="300">THARLES AMARO</h2>
-            <p class="modern-color animfadeInUpBig" data-time="600">SISTEMAS PARA INTERNET</p>
+            <h2 class="animfadeInUpBig" data-time="300"><?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+</h2>
+            <p class="modern-color animfadeInUpBig" data-time="600"><?php echo $_smarty_tpl->tpl_vars['subtitle']->value;?>
+</p>
 
             <ul>
                 <li class="animfadeInUpBig" data-time="700"><a class="active" id="home-btn">INÍCIO</a></li>
                 <li class="animfadeInUpBig" data-time="750"><a id="about-btn">SOBRE</a></li>
-                <li class="animfadeInUpBig" data-time="800"><a href="#">RESUMO</a></li>
-                <li class="animfadeInUpBig" data-time="850"><a href="#">HABILIDADES</a></li>
-                <li class="animfadeInUpBig" data-time="900"><a href="#">PORTFOLIO</a></li>
-                <li class="animfadeInUpBig" data-time="950"><a href="#">CONTATO</a></li>
+                <li class="animfadeInUpBig" data-time="800"><a id="resume-btn">RESUMO</a></li>
+                <li class="animfadeInUpBig" data-time="850"><a id="skill-btn">HABILIDADES</a></li>
+                <li class="animfadeInUpBig" data-time="900"><a id="porto-btn">PORTFOLIO</a></li>
+                <li class="animfadeInUpBig" data-time="950"><a id="contact-btn">CONTATO</a></li>
             </ul>
 
                         <div id="wrapfooter" class="opaci">
@@ -138,7 +150,10 @@ avatar.png">
                     <a class="glyph-icon flaticon-facebook25" href="https://www.facebook.com/tharlesamaro.face"
                        target="_blank" rel="noopener"></a>
                 </div>
-                <div id="footer" class="animfadeInUpBig" data-time="1100">©all rights reserved. tharles amaro 2018</div>
+                <div id="footer" class="animfadeInUpBig" data-time="1100">©all rights
+                    reserved. <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+ <?php echo $_smarty_tpl->tpl_vars['currentYear']->value;?>
+</div>
             </div>
                     </div>
         <div class="holdsidebar"></div>
