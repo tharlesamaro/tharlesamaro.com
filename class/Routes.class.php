@@ -23,7 +23,7 @@ Class Routes
     # folder assets
     private static function getAssetsFolder()
     {
-        return self::getSiteHome() . '/assets/';
+        return self::getSiteHome() . 'assets/';
     }
 
     static function getDefaultCssFolder()

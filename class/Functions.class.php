@@ -24,6 +24,10 @@ Class Functions
         return $interval->y;
     }
 
+    /**
+     * @param $directory
+     * @return int
+     */
     static function getNumberOfFilesImgInTheDirectory($directory)
     {
         $files = glob("$directory{*.jpg}", GLOB_BRACE);
